@@ -1,8 +1,7 @@
 package main
 
-type fork struct {
-	nrOfUses int
-	beingUsed bool
-	input chan fork
-	output chan fork
+type Fork struct {
+	nrUsed int
+	input  chan int
+	output chan bool
 }
