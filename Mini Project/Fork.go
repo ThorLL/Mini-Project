@@ -8,9 +8,12 @@ type Fork struct {
 }
 
 func (f *Fork) run() {
-	<-f.input
-	f.inUse = true
-	f.nrUsed++
-	f.inUse = false
-	f.output <- 1
+	for {
+		<-f.input
+		f.inUse = true
+		f.nrUsed++
+		f.inUse = false
+		f.output <- 1
+	}
+
 }
