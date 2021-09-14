@@ -37,7 +37,8 @@ func main() {
 	go fork3.run()
 	go fork4.run()
 	go fork5.run()
-
+	i := 0
 	for {
+		i++
 	}
 }
